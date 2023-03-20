@@ -1,0 +1,67 @@
+<div class="login-container">
+  <div class="row">
+    <mat-card class="col login-form-1">
+      <mat-card-title>
+        <h3>
+          <img src="../../../assets/login.svg" alt="login-logo" style="height: 50px"/>
+          Connexion
+        </h3>
+      </mat-card-title>
+      <mat-card-content style="width: 70% ;margin: auto">
+        <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+            <mat-form-field appearance="fill">
+              <mat-label style="color: bisque">Nom d'utilisateur</mat-label>
+              <input type="text" matInput required ngModel name="username" >
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label style="color: bisque">Mot de passe</mat-label>
+              <input matInput [type]="'password'" name="password" required ngModel/>
+
+            </mat-form-field>
+            <button type="submit" mat-raised-button>Se Connecter</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="col login-form-2">
+      <mat-card-title>
+        <h3>
+          <img src="../../../assets/signup.svg" alt="signup-logo" style="height: 40px"/>
+          Inscription
+        </h3>
+      </mat-card-title>
+      <mat-card-content style="width: 70% ;margin: auto">
+        <form (submit)="onRegister(registerForm)" #registerForm="ngForm">
+          <mat-form-field appearance="fill">
+            <mat-label>Type d'utilisateur</mat-label>
+            <mat-select [ngModel]="current" (ngModelChange)="onType($event)" name="current">
+              <mat-option [value]="i" *ngFor="let i of accountTypes">{{i}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="fill" color="primary">
+            <mat-label>Nom d'utilisateur</mat-label>
+            <input matInput [type]="'text'" name="username" required ngModel />
+          </mat-form-field>
+          <mat-form-field appearance="fill" *ngIf="current === 'Docteur'">
+            <mat-label>Prénom</mat-label>
+            <input matInput [type]="'text'" name="firstName" required ngModel />
+          </mat-form-field>
+          <mat-form-field appearance="fill" *ngIf="current === 'Docteur'">
+            <mat-label>Nom</mat-label>
+            <input matInput [type]="'text'" name="lastName" required ngModel />
+          </mat-form-field>
+          <mat-form-field appearance="fill" *ngIf="current === 'Établissement'">
+            <mat-label>Nom d'établissement</mat-label>
+            <input matInput [type]="'text'" name="name" required ngModel />
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Mot de passe</mat-label>
+            <input matInput [type]="'password'" name="password" required ngModel/>
+            
+          </mat-form-field>
+          <br />
+          <button mat-raised-button type="submit">S'inscrire</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

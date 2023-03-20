@@ -1,0 +1,29 @@
+#tdDescription {
+    max-width: 100px; 
+    overflow-wrap:break-word;
+}
+
+.mat-header-row{
+    background-color: #00000073;
+}
+
+.mat-header-cell {
+    color: white;
+    font-size: larger;
+}
+
+mat-spinner {
+    margin: 0 auto;
+    margin-top: 200px; 
+    width: 100px;
+}
+
+.mat-table {
+    width: 100%;
+}
+
+button {
+    background-color: #F58965;
+    color: white;
+    font-weight: bolder;
+}

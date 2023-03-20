@@ -1,0 +1,36 @@
+.list-locations{
+    padding-right: 0;
+    overflow-y: scroll; 
+    height: min-content;
+    max-height: 700px;
+}
+
+.add-location-container {
+    padding-top: 10%;
+}
+
+h2 {
+    padding: 2%;
+}
+.location-form {
+    padding-bottom: 3%;
+}
+
+[type=submit] {
+    margin-bottom: 2%;
+}
+
+#add-location {
+    background-color: white;
+    height: 350px;
+}
+
+.container {
+    margin-top: 5%;
+}
+
+mat-spinner {
+    margin: 0 auto;
+    margin-top: 200px; 
+    width: 100px;
+}

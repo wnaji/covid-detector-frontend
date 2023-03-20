@@ -1,0 +1,10 @@
+#logout {
+  display: block;
+  margin-left: auto;
+  height: 70%;
+  cursor: pointer;
+}
+
+#logo {
+  height: inherit;
+}
